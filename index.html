@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商务活动邀请函</title>
+  <style>
+    :root { --ink:#0a1424; --gold:#c9a86a; --paper:#f7f4ed; --muted:#7f8995; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; overflow-x:hidden; color:var(--paper); background:var(--ink); font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; }
+    .glow { position:fixed; width:46vw; height:46vw; border-radius:50%; filter:blur(18px); opacity:.2; pointer-events:none; animation:float 12s ease-in-out infinite alternate; background:radial-gradient(circle,#c9a86a 0%,transparent 68%); }
+    .glow-a { top:-18vw; left:-15vw; }.glow-b { right:-20vw; bottom:-22vw; animation-delay:-5s; }
+    @keyframes float { to { transform:translate(10vw,6vw) scale(1.15); } }
+    .frame { position:relative; width:min(920px,calc(100% - 36px)); min-height:100vh; margin:auto; padding:56px 0 38px; display:flex; flex-direction:column; }
+    .top { display:flex; justify-content:space-between; align-items:center; font-size:12px; letter-spacing:.2em; color:#cfd4d8; }
+    .mark { display:flex; gap:10px; align-items:center; font-weight:600; }.mark i { width:22px; height:1px; background:var(--gold); display:block; }
+    .hero { flex:1; display:flex; flex-direction:column; justify-content:center; padding:92px 4vw 64px; border-bottom:1px solid rgba(247,244,237,.2); }
+    .eyebrow { color:var(--gold); font-size:13px; font-weight:600; letter-spacing:.34em; margin-bottom:26px; }
+    h1 { margin:0; max-width:780px; font-family:Georgia,"Songti SC",serif; font-size:clamp(44px,8vw,96px); line-height:1.08; font-weight:400; letter-spacing:.03em; }
+    .lead { max-width:540px; margin:32px 0 0; font-size:16px; line-height:2; color:#d4d8dc; letter-spacing:.08em; }
+    .details { display:grid; grid-template-columns:1fr 1.15fr 1.1fr; gap:24px; padding:34px 4vw; }
+    .detail { padding-left:16px; border-left:1px solid var(--gold); }
+    .label { margin-bottom:10px; color:var(--gold); font-size:11px; letter-spacing:.25em; }.value { font-size:15px; line-height:1.7; letter-spacing:.05em; }
+    .agenda { padding:68px 4vw; }.agenda h2 { margin:0 0 30px; font-size:14px; letter-spacing:.24em; color:var(--gold); font-weight:500; }
+    .agenda-list { border-top:1px solid rgba(247,244,237,.22); }.agenda-item { padding:20px 0; border-bottom:1px solid rgba(247,244,237,.16); display:grid; grid-template-columns:112px 1fr; gap:20px; font-size:15px; line-height:1.6; }.agenda-item time { color:var(--gold); font-variant-numeric:tabular-nums; }
+    .bottom { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; padding:12px 4vw 0; color:#bbc1c8; font-size:12px; letter-spacing:.1em; }.rsvp { color:var(--paper); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:7px; letter-spacing:.14em; }
+    .enter { animation:rise .9s cubic-bezier(.2,.7,.2,1) both; }.enter:nth-child(2){animation-delay:.12s}.enter:nth-child(3){animation-delay:.23s}.enter:nth-child(4){animation-delay:.35s}
+    @keyframes rise { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+    @media (max-width:620px) { .frame{padding-top:28px}.hero{padding:76px 0 50px}.details{grid-template-columns:1fr;gap:22px;padding-left:0;padding-right:0}.agenda{padding:55px 0}.bottom{padding-left:0;padding-right:0;align-items:flex-start;flex-direction:column}.agenda-item{grid-template-columns:90px 1fr;gap:12px}.top{font-size:10px} }
+  </style>
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <main class="frame">
+    <header class="top enter"><div class="mark"><i></i> NOVA INSIGHTS</div><div>INVITATION · 2026</div></header>
+    <section class="hero enter">
+      <div class="eyebrow">BUSINESS FORUM / 2026</div>
+      <h1>远见共启<br>智创未来</h1>
+      <p class="lead">诚邀您莅临年度商务交流会，与行业领袖及创新伙伴共同探讨趋势、连接机遇。</p>
+    </section>
+    <section class="details enter" aria-label="活动信息">
+      <div class="detail"><div class="label">DATE</div><div class="value">2026.10.18 · 周日<br>14:00 — 18:30</div></div>
+      <div class="detail"><div class="label">VENUE</div><div class="value">上海浦东嘉里大酒店<br>三层 · 大宴会厅</div></div>
+      <div class="detail"><div class="label">HOST</div><div class="value">NOVA INSIGHTS<br>战略与创新中心</div></div>
+    </section>
+    <section class="agenda enter">
+      <h2>活动安排</h2>
+      <div class="agenda-list">
+        <div class="agenda-item"><time>14:00</time><span>来宾签到与交流</span></div>
+        <div class="agenda-item"><time>14:30</time><span>主旨演讲：重塑增长的下一个周期</span></div>
+        <div class="agenda-item"><time>15:30</time><span>圆桌对谈：技术、组织与新机遇</span></div>
+        <div class="agenda-item"><time>17:00</time><span>自由交流与商务酒会</span></div>
+      </div>
+    </section>
+    <footer class="bottom enter"><span>着商务正装出席 · 凭此函入场</span><a class="rsvp" href="mailto:rsvp@example.com?subject=商务活动报名">RSVP 确认出席</a></footer>
+  </main>
+</body>
+</html>
